@@ -1,0 +1,11 @@
+[user]
+	name = elgris
+	email = iddqd07@yandex.ru
+[alias]
+	st = status
+	co = checkout
+	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+	cob = checkout -b
+	cm = !git add -A && git commit -m
+[push]
+	default = simple
