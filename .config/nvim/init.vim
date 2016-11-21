@@ -28,10 +28,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'L9'
 
 Plugin 'https://github.com/terryma/vim-multiple-cursors'
 Plugin 'https://github.com/fatih/vim-go'
-
+Plugin 'https://bitbucket.org/ns9tks/vim-fuzzyfinder/'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -49,6 +50,8 @@ filetype plugin indent on    " required
 syntax on
 set background=dark
 colorscheme monokai
+
+" netrw Tree View configs
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
@@ -58,3 +61,8 @@ augroup ProjectDrawer
   autocmd!
   autocmd VimEnter * :Vexplore
 augroup END
+
+" Tabs config
+set expandtab
+set tabstop=4
+set shiftwidth=4
