@@ -7,6 +7,7 @@ if has('unnamedplus')
 else
   set clipboard=unnamed
 endif
+set splitbelow
 
 " set up path to configuration file
 if has('nvim')
@@ -32,7 +33,10 @@ Plugin 'L9'
 
 Plugin 'https://github.com/terryma/vim-multiple-cursors'
 Plugin 'https://github.com/fatih/vim-go'
-Plugin 'https://bitbucket.org/ns9tks/vim-fuzzyfinder/'
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim'
+Plugin 'https://github.com/tpope/vim-vinegar'
+Plugin 'https://github.com/airblade/vim-gitgutter'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,7 +60,7 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
-let g:netrw_winsize = 25
+let g:netrw_winsize = 15
 augroup ProjectDrawer
   autocmd!
   autocmd VimEnter * :Vexplore
@@ -66,3 +70,15 @@ augroup END
 set expandtab
 set tabstop=4
 set shiftwidth=4
+
+" remap
+:tnoremap ˙ <C-\><C-n><C-w>h
+:tnoremap ∆ <C-\><C-n><C-w>j
+:tnoremap ˚ <C-\><C-n><C-w>k
+:tnoremap ¬ <C-\><C-n><C-w>l
+:nnoremap ˙ <C-w>h
+:nnoremap ∆ <C-w>j
+:nnoremap ˚ <C-w>k
+:nnoremap ¬ <C-w>l
+:nnoremap <F12> :split term://bash<CR>
+
